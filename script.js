@@ -1,29 +1,20 @@
-let num = 50;
+'use strict';
+var money = prompt("Ваш бюджет на месяц?","0");
+var time= prompt("Введите дату в формате YYYY-MM-DD","2019-03-04");
 
-if (num < 49) {
-    console.log('Неверно!')
-} else if (num > 100) {
-    console.log("Много!")
-} else {
-    console.log('верно!')
-};
-
-(num == 50 ) ? console.log('Верно!') : console.log("Неверно!");
-
-switch (num) {
-    case num < 49:
-        console.log('Неверно!');
-        break;
-    case num > 100:
-        console.log('много!');
-        break;
-    case num > 80:
-        console.log('Все еще много!');
-        break;
-    case 50:
-        console.log('Верно!');
-        break;
-    default:
-        console.loge("Что-то пошло не так!");
-        break;
+var appData = {
+    budget: money,
+    timeData: time,
+    expenses: prompt("Введите обязательную статью расходов в этом месяце","еда") + " : " + 
+                 prompt("Во сколько обойдется?","100"),
+       // “ответ на первый вопрос” : “ответ на второй вопрос”
+        
+    //optionalExpenses: prompt("объект с необязательными расходами","еда"),
+    //income: prompt("объект с обязательными расходами","еда"),
+    savings: false
 }
+//appData.expenses.subExp = prompt("Введите обязательную статью расходов в этом месяце","еда");
+//appData.expenses.subCost = prompt("Во сколько обойдется?","100");
+alert(appData.budget/30);
+//alert(appData.expenses);
+
